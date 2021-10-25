@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+body {
+    font-family: Open Sans Condensed;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: black;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+nav ul a {
+    color:white;
+text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul a:hover {
+    color: #b0cc33;
+}
+
+
+/* Barra de pesquisa */
+
+#busca {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+header .btn-compra {
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+header i {
+    margin: 10px;
+}
+
+
+/* Produtos */
+
+h1 {
+    text-align: center;
+}
+
+#produtos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#produtos .item {
+    margin: 40px;
+    text-align: center;
+}
+
+.btn-compra {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #33cc33;
+    color: white;
+    font-weight: 900;
+    border: none;
+    box-shadow: 2px 2px 2px black;
+}
+
+.btn-compra:hover {
+    background-color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* Galeria */
+
+#galeria {
+    display: flex;
+    justify-content: center;
+}
+
+.imagens-galeria {
+    margin: 40px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+/* Tabela */
+
+table,
+th,
+tr,
+td {
+    border: solid 1px;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+#filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#filtro img {
+    margin-left: 20%;
+}
