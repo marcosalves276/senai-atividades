@@ -6,11 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game mania - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
-</head>
+    </head>
 
 <body>
     <header>
@@ -20,12 +30,34 @@
             <label for="busca">Pesquisar</label>
             <input type="text" id="busca" placeholder="O que está procurando?">
             <button class="btn-compra">Buscar</button>
-
-            <i class="fas fa-user" onclick="login()"></i> Login
-
-            <i class="fas fa-shopping-cart"></i> Carrinho
+            <a href="javascript:void(0)">
+                <i class="fas fa-user" onclick="login()"></i> Login
+            </a>
+            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-shopping-cart"></i> Carrinho
+            </a>
         </div>
-        <div id="usuario" ></div>
+
+        <div id="usuario"></div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrinho de compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="lista" class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-success">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Início do menu -->
@@ -52,33 +84,42 @@
     <!-- Seção de produtos -->
     <section id="produtos">
 
-        <div class="item">
+        <div id="item-cabo" class="item">
             <img src="midias/informatica/cabo hdmi.jpg" alt="cabo hdmi" width="220" height="200">
             <h3>cabo hdmi</h3>
             <p>R$ 31,00</p>
             <button class="btn-compra"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            <button onclick="carrinho(this.id)" id="btn-cabo" class="btn-salvar"><i class="fas fa-star"></i>
+                Salvar</button>
         </div>
 
-        <div class="item">
+        <div id="item-estabelizador" class="item">
             <img src="midias/informatica/estabelizador upsai.jpg" alt="estabelizador upsai" width="220" height="200">
             <h3>estabelizador upsai</h3>
             <p>R$ 529,00</p>
             <button class="btn-compra"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            <button onclick="carrinho(this.id)" id="btn-estabelizador" class="btn-salvar"><i class="fas fa-star"></i>
+                Salvar</button>
         </div>
 
-        <div class="item">
+        <div id="item-fonte" class="item">
             <img src="midias/informatica/fonte 12v.jpg" alt="fonte 12v" width="220" height="200">
             <h3>fonte 12v</h3>
             <p>R$ 254,00
             </p>
             <button class="btn-compra"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            <button onclick="carrinho(this.id)" id="btn-fonte" class="btn-salvar"><i class="fas fa-star"></i>
+                Salvar</button>
         </div>
 
-        <div class="item">
-            <img src="midias/informatica/tomada rede informatica.jpg" alt="tomada rede informatica" width="220" height="200">
+        <div id="item-tomada" class="item">
+            <img src="midias/informatica/tomada rede informatica.jpg" alt="tomada rede informatica" width="220"
+                height="200">
             <h3>tomada rede informatica</h3>
             <p>R$ 74,00</p>
             <button class="btn-compra"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            <button onclick="carrinho(this.id)" id="btn-tomada" class="btn-salvar"><i class="fas fa-star"></i>
+                Salvar</button>
         </div>
     </section>
     <!-- Fim da seção de produtos -->

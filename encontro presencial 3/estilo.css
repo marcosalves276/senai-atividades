@@ -2,7 +2,11 @@
 body {
     font-family: Open Sans Condensed;
 }
+a{
+    color: black !important;
+    text-decoration: none !important;
 
+}
 header {
     display: flex;
     align-items: center;
@@ -21,7 +25,7 @@ nav ul {
 }
 
 nav ul a {
-    color:white;
+    color:white !important;
 text-decoration: none;
     list-style-type: none;
 }
@@ -81,6 +85,16 @@ h1 {
     border: none;
     box-shadow: 2px 2px 2px black;
 }
+.btn-salvar{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #b7ec52;
+    font-weight: 900;
+    border: none;
+    box-shadow: 2px 2px 2px black;
+
+}
 
 .btn-compra:hover {
     background-color: black;
@@ -88,6 +102,12 @@ h1 {
     cursor: pointer;
 }
 
+.btn-salvar:hover {
+    background-color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+     color:white 
+}
 
 /* Galeria */
 
