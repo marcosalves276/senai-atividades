@@ -39,7 +39,10 @@ nav ul a:hover {
 }
 
 /* Barra de pesquisa */
-
+#barraPesquisa{
+    display: flex;
+    align-items: center;
+}
 #busca {
     width: 200px;
     height: 25px;
@@ -59,7 +62,15 @@ header i {
 
 
 /* Produtos */
-
+#contador{
+background-color: #33cc33;  
+border-radius: 50%;  
+color: white;
+width: 25px;
+height:25px;
+text-align: center;
+margin-left: 5px;
+}
 h1 {
     text-align: center;
 }
